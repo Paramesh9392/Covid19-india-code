@@ -109,7 +109,7 @@ app.get('/districts/:districtId/', async (request, response) => {
   response.send(ConvertDistrictsPascalCase(district))
 })
 
-app.delete('/districts/:districtId/', (request, response) => {
+app.delete('/districts/:districtId/', async (request, response) => {
   const {districtId} = request.params
   const deleteDistrictQuery = `
       DELETE FROM 
